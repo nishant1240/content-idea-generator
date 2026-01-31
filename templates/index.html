@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
+    <title>Content Idea Generator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 AI Content Idea Generator</h1>
+        <p class="subtitle">Generate creative content ideas in seconds</p>
+        
+        <div class="form-container">
+            <div class="input-group">
+                <label for="platform">Platform</label>
+                <select id="platform">
+    <option value="YouTube">YouTube</option>
+    <option value="Instagram">Instagram</option>
+    <option value="Blog">Blog</option>
+    <option value="X (Twitter)">X (Twitter)</option>
+           </select>
+            </div>
+            
+            <div class="input-group">
+                <label for="niche">Niche</label>
+                <input type="text" id="niche" placeholder="e.g., fitness, tech, cooking">
+            </div>
+            
+            <div class="input-group">
+                <label for="content-type">Content Type</label>
+                <select id="content-type">
+                    <option value="tutorial">Tutorial</option>
+                    <option value="listicle">Listicle</option>
+                    <option value="how-to">How-to Guide</option>
+                    <option value="review">Review</option>
+                    <option value="entertainment">Entertainment</option>
+                </select>
+            </div>
+            
+            <button id="generate-btn" onclick="generateIdeas()">Generate Ideas</button>
+        </div>
+        
+        <div id="loading" class="loading" style="display: none;">
+            <p>Generating ideas...</p>
+        </div>
+        
+        <div id="result" class="result"></div>
+    </div>
+    
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+=======
+    <title>AI Content Idea Generator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i data-lucide="sparkles" class="logo-icon"></i>
+                    <span>AI Content Generator</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Hero Section -->
+            <div class="hero">
+                <h1 class="hero-title">Generate Content Ideas</h1>
+                <p class="hero-subtitle">
+                    Never run out of content ideas again. Get AI-powered suggestions tailored to your niche, platform, and audience.
+                </p>
+            </div>
+
+            <!-- Generator Form -->
+            <div class="form-card">
+                <form id="generator-form">
+                    <div class="form-group">
+                        <label for="niche" class="form-label">What's your topic or niche?</label>
+                        <textarea 
+                            id="niche" 
+                            class="form-textarea" 
+                            placeholder="e.g., sustainable living, digital marketing, fitness for beginners..."
+                            rows="3"
+                            required
+                        ></textarea>
+                        <p class="form-hint">Be specific for better results</p>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="content-type" class="form-label">Content Type</label>
+                            <select id="content-type" class="form-select">
+                                <option value="blog">📝 Blog Post</option>
+                                <option value="social">📱 Social Media</option>
+                                <option value="video">🎥 Video</option>
+                                <option value="podcast">🎙️ Podcast</option>
+                                <option value="newsletter">📧 Newsletter</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="platform" class="form-label">Platform</label>
+                            <select id="platform" class="form-select">
+                                <option value="YouTube">YouTube</option>
+                                <option value="Instagram">Instagram</option>
+                                <option value="Blog">Blog</option>
+                                <option value="X (Twitter)">X (Twitter)</option>
+                                <option value="LinkedIn">LinkedIn</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="tone" class="form-label">Tone</label>
+                            <select id="tone" class="form-select">
+                                <option value="professional">Professional</option>
+                                <option value="casual">Casual</option>
+                                <option value="humorous">Humorous</option>
+                                <option value="inspirational">Inspirational</option>
+                                <option value="educational">Educational</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn-generate" id="generate-btn">
+                        <i data-lucide="sparkles" class="btn-icon"></i>
+                        <span id="btn-text">Generate Content Ideas</span>
+                    </button>
+                </form>
+            </div>
+
+            <!-- Loading State -->
+            <div id="loading" class="loading" style="display: none;">
+                <div class="loading-spinner"></div>
+                <p>Generating amazing ideas...</p>
+            </div>
+
+            <!-- Results Section -->
+            <div id="results-section" class="results-section" style="display: none;">
+                <div class="results-header">
+                    <h2 class="results-title">Your Content Ideas</h2>
+                    <div class="results-count">
+                        <span id="ideas-count">0</span> ideas generated
+                    </div>
+                </div>
+                <div id="results-grid" class="results-grid"></div>
+            </div>
+
+            <!-- Empty State -->
+            <div id="empty-state" class="empty-state">
+                <div class="empty-state-icon">
+                    <i data-lucide="lightbulb" class="empty-icon"></i>
+                </div>
+                <h3 class="empty-title">Ready to spark some ideas?</h3>
+                <p class="empty-text">
+                    Fill in the form above and click "Generate Content Ideas" to get started with AI-powered content suggestions.
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+    </script>
+>>>>>>> f48bd03 (Initial commit - Content Idea Generator)
+</body>
+</html>
