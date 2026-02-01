@@ -3,54 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<<<<<<< HEAD
-    <title>Content Idea Generator</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-</head>
-<body>
-    <div class="container">
-        <h1>🚀 AI Content Idea Generator</h1>
-        <p class="subtitle">Generate creative content ideas in seconds</p>
-        
-        <div class="form-container">
-            <div class="input-group">
-                <label for="platform">Platform</label>
-                <select id="platform">
-    <option value="YouTube">YouTube</option>
-    <option value="Instagram">Instagram</option>
-    <option value="Blog">Blog</option>
-    <option value="X (Twitter)">X (Twitter)</option>
-           </select>
-            </div>
-            
-            <div class="input-group">
-                <label for="niche">Niche</label>
-                <input type="text" id="niche" placeholder="e.g., fitness, tech, cooking">
-            </div>
-            
-            <div class="input-group">
-                <label for="content-type">Content Type</label>
-                <select id="content-type">
-                    <option value="tutorial">Tutorial</option>
-                    <option value="listicle">Listicle</option>
-                    <option value="how-to">How-to Guide</option>
-                    <option value="review">Review</option>
-                    <option value="entertainment">Entertainment</option>
-                </select>
-            </div>
-            
-            <button id="generate-btn" onclick="generateIdeas()">Generate Ideas</button>
-        </div>
-        
-        <div id="loading" class="loading" style="display: none;">
-            <p>Generating ideas...</p>
-        </div>
-        
-        <div id="result" class="result"></div>
-    </div>
-    
-    <script src="{{ url_for('static', filename='script.js') }}"></script>
-=======
     <title>AI Content Idea Generator</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <!-- Lucide Icons -->
@@ -172,6 +124,5 @@
         // Initialize Lucide icons
         lucide.createIcons();
     </script>
->>>>>>> f48bd03 (Initial commit - Content Idea Generator)
 </body>
 </html>
